@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AOL District Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <style>
+    .card { transition: 0.3s; cursor: pointer; border-radius: 12px; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.2) !important; }
+    
+    /* Ensure horizontal rules inside colored cards look clean */
+    .bg-success hr, .bg-danger hr { border-top: 1px solid rgba(255,255,255,0.3); }
+    .bg-warning hr { border-top: 1px solid rgba(0,0,0,0.1); }
+</style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 font-weight-bold">Karnataka District Activity Tracker</h1>
+        <h3 class="text-secondary mb-3">(Jan 15, 2026 to May 31, 2026)</h3>
+        <p id="last-updated-text" class="text-muted font-italic mb-3">Loading timestamp...</p>
+        <p class="lead">Click on a district to view course timelines and registration links.</p>
+    </div>
+    
+    <div class="row" id="dashboard-container"></div>
+
+    <div id="detail-view" class="mt-5 card shadow p-4" style="display:none;">
+        <h3 id="detail-title" class="mb-4"></h3>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Status</th>
+                        <th>Course</th>
+                        <th>Pax</th>
+                        <th>Teachers</th>
+                        <th>Starts On</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="detail-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
