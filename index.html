@@ -41,52 +41,118 @@
         /* The actual pie slices will be set via inline styles in JS */
     }
     .chart-legend { font-size: 0.75rem; line-height: 1.3; }
+    
+    /* Sidebar Layout */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .main-layout {
+        display: flex;
+        gap: 20px;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+    .sidebar {
+        flex: 0 0 280px;
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        height: fit-content;
+        position: sticky;
+        top: 20px;
+    }
+    .main-content {
+        flex: 1;
+        min-width: 0;
+    }
+    .full-width-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    @media (max-width: 768px) {
+        .main-layout {
+            flex-direction: column;
+            padding: 0 10px;
+        }
+        .sidebar {
+            flex: 1;
+            position: static;
+            margin-bottom: 20px;
+        }
+        .full-width-container {
+            padding: 0 10px;
+        }
+    }
 </style>
 </head>
 <body>
     <img src="Art-of-Living_Logo.png" alt="Art of Living Logo" class="logo">
-    <div class="container py-5">
+    <div class="full-width-container py-3">
     <div class="text-center mb-5">
         <h1 class="display-4 font-weight-bold">Karnataka District Activity Tracker</h1>
-        <h3 class="text-secondary mb-3">(Jan 15, 2026 to May 31, 2026)</h3>
+        <h3 class="text-secondary mb-3">
+            <div class="alert alert-info" role="alert">
+            (Jan 15, 2026 to May 31, 2026)
+            </div>
+        </h3>
         <p id="last-updated-text" class="text-muted font-italic mb-3">Loading timestamp...</p>
-        <p class="lead">Click on a district to view course timelines and registration links.</p>
-        <div class="d-flex flex-column align-items-center mb-4">
-            <div class="btn-group shadow-sm mb-3" role="group">
-                <button type="button" class="btn btn-primary" id="btn-all" onclick="setFilter('all')">All Programs</button>
-                <button type="button" class="btn btn-outline-primary" id="btn-entry" onclick="setFilter('entry')">Entry Level Only</button>
+        <div class="btn-group btn-group-toggle mb-4 shadow-sm" data-toggle="buttons">
+            <label class="btn btn-warning" id="district_label">
+                <input type="radio" name="view" onclick="showView('district')" checked> District Dashboard
+            </label>
+            <label class="btn btn-outline-warning" id="state_label">
+                <input type="radio" name="view" onclick="showView('state')"> State Summary
+            </label>
+        </div>
+        <div id="state-summary-container" class="mb-5" style="display:none;"></div>
+    </div>
+
+    <div class="main-layout">
+        <div class="sidebar" id="filter-controls">
+            <div class="custom-control custom-checkbox mb-4">
+                <input type="checkbox" class="custom-control-input" id="sortTopCheck" onchange="toggleSort()">
+                <label class="custom-control-label font-weight-bold" for="sortTopCheck">Sort by Top Performing</label>
             </div>
             
-            <div class="custom-control custom-checkbox custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="sortTopCheck" onchange="toggleSort()">
-                <label class="custom-control-label font-weight-bold" for="sortTopCheck" style="cursor:pointer">
-                    Sort by Top Performing Districts
-                </label>
+            <div class="mb-4">
+                <div class="btn-group-vertical w-100" role="group">
+                    <button type="button" class="btn btn-primary" id="btn-all" onclick="setFilter('all')">All Programs</button>
+                    <button type="button" class="btn btn-outline-primary" id="btn-entry" onclick="setFilter('entry')">Entry Level Only</button>
+                </div>
             </div>
+            
+            <div class="alert alert-info" role="alert">
+                <small>Click on a district to view course timelines and registration links.</small>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="row" id="dashboard-container"></div>
         </div>
     </div>
     
-    <div class="row" id="dashboard-container"></div>
-
-    <div id="detail-view" class="mt-5 card shadow p-4" style="display:none;">
-        <h3 id="detail-title" class="mb-4"></h3>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Status</th>
-                        <th>Course</th>
-                        <th>Pax</th>
-                        <th>Teachers</th>
-                        <th>Starts On</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="detail-table-body"></tbody>
-            </table>
+    <div class="full-width-container">
+        <div id="detail-view" class="mt-5 card shadow p-4" style="display:none;">
+            <h3 id="detail-title" class="mb-4"></h3>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Status</th>
+                            <th>Course</th>
+                            <th>Pax</th>
+                            <th>Teachers</th>
+                            <th>Starts On</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detail-table-body"></tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
     <script src="app.js"></script>
 </body>
 </html>
