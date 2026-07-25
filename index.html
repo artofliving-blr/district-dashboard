@@ -107,10 +107,16 @@
         <h1 class="display-4 font-weight-bold">Karnataka District Activity Tracker</h1>
         <h3 class="text-secondary mb-3">
             <div class="alert alert-info" role="alert">
-            (Jan 15, 2026 to May 31, 2026)
+            <span id="date-range">(Jun 1, 2026 onwards)</span>
             </div>
         </h3>
         <p id="last-updated-text" class="text-muted font-italic mb-3">Loading timestamp...</p>
+        
+        <div class="btn-group mb-3 shadow-sm" role="group">
+            <button type="button" class="btn btn-info" id="btn-current" onclick="switchDataSource('current')">Current</button>
+            <button type="button" class="btn btn-outline-info" id="btn-history" onclick="switchDataSource('history')">History (Jan-May 2026)</button>
+        </div>
+        <br>
         <div class="btn-group btn-group-toggle mb-4 shadow-sm" data-toggle="buttons">
             <label class="btn btn-warning" id="district_label">
                 <input type="radio" name="view" onclick="showView('district')" checked> District Dashboard

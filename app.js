@@ -1,1 +1,465 @@
-const _0x4e1d1d=_0x584e;(function(_0x405023,_0x1201c3){const _0x595166=_0x584e,_0x44c0db=_0x405023();while(!![]){try{const _0x3b040a=parseInt(_0x595166(0xdd))/0x1*(parseInt(_0x595166(0xf2))/0x2)+parseInt(_0x595166(0x9a))/0x3+parseInt(_0x595166(0x108))/0x4+-parseInt(_0x595166(0xea))/0x5*(parseInt(_0x595166(0x91))/0x6)+parseInt(_0x595166(0xae))/0x7+parseInt(_0x595166(0xf0))/0x8*(-parseInt(_0x595166(0xfb))/0x9)+-parseInt(_0x595166(0xa6))/0xa;if(_0x3b040a===_0x1201c3)break;else _0x44c0db['push'](_0x44c0db['shift']());}catch(_0x5cc9d7){_0x44c0db['push'](_0x44c0db['shift']());}}}(_0x5b42,0x50d37));const SECRET_KEY=_0x4e1d1d(0xc2);let globalData={};async function loadDashboard(){const _0x28d6a3=_0x4e1d1d,_0x217678=await fetch('data.enc'),_0x3666ea=await _0x217678[_0x28d6a3(0xa2)](),_0x242694=CryptoJS[_0x28d6a3(0xfc)]['decrypt'](_0x3666ea,SECRET_KEY),_0x764e77=JSON['parse'](_0x242694[_0x28d6a3(0xda)](CryptoJS[_0x28d6a3(0xd9)][_0x28d6a3(0xb0)])),_0x519241=_0x764e77[_0x28d6a3(0xa8)]['last_updated'];globalData=_0x764e77[_0x28d6a3(0xd6)],document[_0x28d6a3(0xc9)](_0x28d6a3(0x88))[_0x28d6a3(0xf8)]='Data\x20Last\x20Updated\x20at:\x20'+_0x519241,document['getElementById']('sortTopCheck')[_0x28d6a3(0x10e)]=!![],document['getElementById']('btn-all')[_0x28d6a3(0xe3)]=_0x28d6a3(0x96),document[_0x28d6a3(0xc9)]('btn-entry')[_0x28d6a3(0xe3)]=_0x28d6a3(0x94);const _0x4e1da5=document[_0x28d6a3(0xc9)]('courseTypeFilter');_0x4e1da5&&(_0x4e1da5[_0x28d6a3(0xaf)]=_0x28d6a3(0x97),FILTER_COURSES[_0x28d6a3(0xfa)](_0xf4d0d6=>{const _0x46b811=_0x28d6a3;_0x4e1da5[_0x46b811(0xaf)]+=_0x46b811(0xd1)+_0xf4d0d6+'\x22>'+_0xf4d0d6+_0x46b811(0xe5);})),renderCards();}function getStatus(_0x53fb54,_0x5192da){const _0x5ad684=_0x4e1d1d,_0x1f7324=new Date();_0x1f7324[_0x5ad684(0xb9)](0x0,0x0,0x0,0x0);const _0x6211d7=new Date(_0x53fb54),_0x137f9a=new Date(_0x5192da);if(_0x1f7324<_0x6211d7)return{'label':_0x5ad684(0xd8),'class':_0x5ad684(0x86),'showBtn':!![]};if(_0x1f7324>=_0x6211d7&&_0x1f7324<=_0x137f9a)return{'label':'Active','class':_0x5ad684(0x103),'showBtn':![]};return{'label':'Completed','class':_0x5ad684(0x8d),'showBtn':![]};}let currentFilter=_0x4e1d1d(0x79),isSortingTop=!![];function setFilter(_0x44ac24){const _0x297dfd=_0x4e1d1d;currentFilter=_0x44ac24,document[_0x297dfd(0xc9)](_0x297dfd(0xbc))[_0x297dfd(0xe3)]=_0x297dfd(0xc3)+(_0x44ac24===_0x297dfd(0xa5)?'btn-primary':_0x297dfd(0xfe)),document['getElementById'](_0x297dfd(0xde))[_0x297dfd(0xe3)]='btn\x20'+(_0x44ac24===_0x297dfd(0x79)?_0x297dfd(0x109):_0x297dfd(0xfe)),renderCards();}function setCourseFilter(_0x1d02d9){selectedCourseType=_0x1d02d9,renderCards();}function toggleSort(){const _0x417f80=_0x4e1d1d;isSortingTop=document[_0x417f80(0xc9)](_0x417f80(0xca))[_0x417f80(0x10e)],renderCards();}function _0x5b42(){const _0x50691d=['bg-danger\x20text-white','last-updated-text','detail-view','\x22\x20target=\x22_blank\x22\x20class=\x22btn\x20btn-sm\x20btn-primary\x22>Register</a>','Course\x20Type','Utkarsha\x20Yoga','table-secondary','YES!+','Active','#ffc107','2570928tVCjvr','flex','</h4><small>Done</small></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','btn\x20btn-primary','dashboard-container','btn\x20btn-outline-primary','<option\x20value=\x22\x22>All\x20Course\x20Types</option>','#6c757d','\x20Program\x20Schedule','1976913KRasiE','</h2><p>Completed</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-md-6\x20mb-4\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20shadow-sm\x20border-success\x20h-100\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-header\x20bg-success\x20text-white\x20font-weight-bold\x22>Total\x20Registrations</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x20d-flex\x20justify-content-around\x20align-items-center\x20text-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><h2\x20class=\x22text-dark\x22>','</strong></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','<small\x20class=\x22text-muted\x22>No\x20phone</small>','includes','stringify','Start\x20Date','#007bff','text','\x22\x20target=\x22_blank\x22\x20class=\x22btn\x20btn-sm\x20btn-outline-success\x22\x20title=\x22WhatsApp\x20Teacher\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20💬\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','btn\x20btn-warning','all','11247090YEdMvk','other','metadata','bg-success\x20text-white','Happiness\x20Program','showBtn','Phone','Rural\x20Happiness\x20Program','4272233AeFAsM','innerHTML','Utf8','End\x20Date','top','Happiness\x20Program\x20for\x20Youth-3\x20Days','http','<a\x20href=\x22','localeCompare','total_pax','</h2><p>Total</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','setHours','display','pax','btn-all','Medha\x20Yoga\x20Level\x201','remove','active','classList','text-dark','Secjgd123#$13','btn\x20','</h4><small>Upcoming</small></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><h4\x20class=\x22mb-0\x22>','%\x20100%);\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22text-left\x20chart-legend\x20','detail-table-body','font-size:\x201.8rem;\x20display:\x20block;\x20margin-bottom:\x205px;','replace','getElementById','sortTopCheck','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-12\x20col-lg-3\x20mb-4\x22\x20onclick=\x22showDetails(\x27','<i\x20class=\x22bi\x20bi-award-fill\x22\x20style=\x22','text-white','Happiness\x20Program\x20(3\x20Days)','\x20color:\x20#CD7F32;\x22></i>','filter-controls','<option\x20value=\x22','district_label','Registered\x20Pax\x20Count','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','size','districts','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','Upcoming','enc','toString','state_label','bg-warning\x20text-dark','167llqGnr','btn-entry','push','Happiness\x20Program\x20For\x20Youth','<i\x20class=\x22bi\x20bi-trophy-fill\x22\x20style=\x22','style','className','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22mt-1\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22tel:','</option>','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','btn\x20btn-outline-warning','btn-top','<tr><td\x20colspan=\x226\x22\x20class=\x22text-center\x20py-4\x20text-muted\x22>No\x20programs\x20currently\x20scheduled\x20for\x20this\x20district.</td></tr>','5xrSMJi','</strong></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><span\x20style=\x22color:','Teachers','map','courses','length','2920vCqXTZ','DOMContentLoaded','6536FkNeVd','scrollTo','filter','state-summary-container','%,\x20','sort','innerText','trim','forEach','8244PTOKNU','AES','\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr\x20class=\x22border-light\x20opacity-50\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22text-center\x20small\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><strong>','btn-outline-primary','reduce','https://','\x20color:\x20#C0C0C0;\x22></i>','Completed','table-success','</h2><p>Other\x20Programs</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22border-left\x20pl-3\x22><h2>','none','</strong></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','Sahaj\x20Samadhi\x20Dhyana\x20Yoga','1614216eYxTOM','btn-primary','label','add','slice','YLTP','checked','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td><strong>','\x22\x20class=\x22btn\x20btn-sm\x20btn-outline-secondary\x20mr-1\x22\x20title=\x22Call\x20Teacher\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20📞\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22https://wa.me/91','keys','entry','class','\x22>■</span>\x20Other:\x20<strong>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','startsWith','name','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-header\x20border-light\x20bg-transparent\x20text-center\x20font-weight-bold\x20pt-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','offsetTop','block','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22pie-chart-container\x20d-flex\x20align-items-center\x20justify-content-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22pie-chart\x20mr-3\x22\x20style=\x22background:\x20conic-gradient(','\x22>■</span>\x20Entry:\x20<strong>','querySelectorAll','\x200%\x20','table-info'];_0x5b42=function(){return _0x50691d;};return _0x5b42();}const ENTRY_LEVEL_COURSES=[_0x4e1d1d(0xaa),'Sahaj\x20Samadhi\x20Dhyana\x20Yoga',_0x4e1d1d(0xad),'Happiness\x20Program\x20for\x20Youth-3\x20Days',_0x4e1d1d(0xe0),'Online\x20Meditation\x20and\x20Breath\x20Workshop',_0x4e1d1d(0x8e),'Happiness\x20Program\x20(3\x20Days)',_0x4e1d1d(0x10d),_0x4e1d1d(0x8c),_0x4e1d1d(0xbd)],FILTER_COURSES=[_0x4e1d1d(0xaa),_0x4e1d1d(0x107),_0x4e1d1d(0x8e),_0x4e1d1d(0x10d)],COURSE_TYPE_MAPPING={'Happiness\x20Program':['Happiness\x20Program',_0x4e1d1d(0xad),_0x4e1d1d(0xce),_0x4e1d1d(0xb3),'Happiness\x20Program\x20For\x20Youth'],'Sahaj\x20Samadhi\x20Dhyana\x20Yoga':[_0x4e1d1d(0x107)],'YES!+':[_0x4e1d1d(0x8e)],'YLTP':[_0x4e1d1d(0x10d)]};let selectedCourseType=null;function getMedalIcon(_0x2ff65f){const _0x449946=_0x4e1d1d;if(!isSortingTop)return'';const _0x14c54c=_0x449946(0xc7);if(_0x2ff65f===0x0)return _0x449946(0xe1)+_0x14c54c+'\x20color:\x20#FFD700;\x22></i>';if(_0x2ff65f===0x1)return _0x449946(0xcc)+_0x14c54c+_0x449946(0x101);if(_0x2ff65f===0x2)return _0x449946(0xcc)+_0x14c54c+_0x449946(0xcf);return'';}function filterData(_0x74dc){const _0x23fb80=_0x4e1d1d;currentFilter=_0x74dc,document[_0x23fb80(0x84)]('.btn-group\x20.btn')[_0x23fb80(0xfa)](_0x4e3710=>_0x4e3710[_0x23fb80(0xc0)][_0x23fb80(0xbe)](_0x23fb80(0xbf)));if(_0x74dc===_0x23fb80(0xa5))document[_0x23fb80(0xc9)](_0x23fb80(0xbc))['classList'][_0x23fb80(0x10b)](_0x23fb80(0xbf));if(_0x74dc===_0x23fb80(0xb2))document['getElementById'](_0x23fb80(0xe8))[_0x23fb80(0xc0)]['add']('active');if(_0x74dc==='entry')document[_0x23fb80(0xc9)](_0x23fb80(0xde))[_0x23fb80(0xc0)][_0x23fb80(0x10b)](_0x23fb80(0xbf));renderCards();}function renderCards(){const _0x519ae3=_0x4e1d1d,_0x4a679e=document[_0x519ae3(0xc9)](_0x519ae3(0x95));_0x4a679e[_0x519ae3(0xaf)]='';let _0x1182bc=Object[_0x519ae3(0x78)](globalData)[_0x519ae3(0xed)](_0x4960db=>{const _0xe137b=_0x519ae3;let _0x2b6e5a=JSON['parse'](JSON[_0xe137b(0x9f)](globalData[_0x4960db]));currentFilter===_0xe137b(0x79)&&(_0x2b6e5a['courses']=_0x2b6e5a[_0xe137b(0xee)][_0xe137b(0xf4)](_0x6e2070=>ENTRY_LEVEL_COURSES[_0xe137b(0x9e)](_0x6e2070['Course\x20Type'])),_0x2b6e5a['total_pax']=_0x2b6e5a[_0xe137b(0xee)][_0xe137b(0xff)]((_0x12eab2,_0x270748)=>_0x12eab2+(parseInt(_0x270748[_0xe137b(0xd3)])||0x0),0x0));if(selectedCourseType&&COURSE_TYPE_MAPPING[selectedCourseType]){const _0x299e99=COURSE_TYPE_MAPPING[selectedCourseType];_0x2b6e5a[_0xe137b(0xee)]=_0x2b6e5a[_0xe137b(0xee)][_0xe137b(0xf4)](_0x524968=>_0x299e99[_0xe137b(0x9e)](_0x524968[_0xe137b(0x8b)])),_0x2b6e5a[_0xe137b(0xb7)]=_0x2b6e5a[_0xe137b(0xee)][_0xe137b(0xff)]((_0x4e6e25,_0x17e101)=>_0x4e6e25+(parseInt(_0x17e101[_0xe137b(0xd3)])||0x0),0x0);}return{'name':_0x4960db,..._0x2b6e5a};});isSortingTop?_0x1182bc['sort']((_0x2bc365,_0x273b8a)=>_0x273b8a[_0x519ae3(0xb7)]-_0x2bc365[_0x519ae3(0xb7)]):_0x1182bc['sort']((_0x21905f,_0x4a03ad)=>_0x21905f[_0x519ae3(0x7e)][_0x519ae3(0xb6)](_0x4a03ad['name'])),_0x1182bc[_0x519ae3(0xfa)]((_0x21ec00,_0x3c0cee)=>{const _0x2688cc=_0x519ae3,_0xbad28d={'Upcoming':0x0,'Active':0x0,'Completed':0x0};let _0x2ebaa4=0x0,_0x30502c=0x0,_0x30bf7c=0x0;_0x21ec00['courses']['forEach'](_0x41304c=>{const _0x2f4435=_0x584e,_0x5f3ca6=getStatus(_0x41304c['Start\x20Date'],_0x41304c[_0x2f4435(0xb1)]);_0xbad28d[_0x5f3ca6[_0x2f4435(0x10a)]]++;const _0x114dad=parseInt(_0x41304c[_0x2f4435(0xd3)])||0x0;_0x5f3ca6[_0x2f4435(0x10a)]===_0x2f4435(0x8f)&&(_0x30bf7c+=_0x114dad),ENTRY_LEVEL_COURSES[_0x2f4435(0x9e)](_0x41304c['Course\x20Type'])?_0x2ebaa4++:_0x30502c++;});let _0x35abbd=_0x2688cc(0x87),_0x1f81b8=_0x2688cc(0xcd);if(_0xbad28d[_0x2688cc(0xd8)]>=0x2||_0xbad28d['Active']>0x0&&_0x30bf7c>0x5)_0x35abbd=_0x2688cc(0xa9);else(_0xbad28d[_0x2688cc(0xd8)]===0x1||_0xbad28d[_0x2688cc(0x8f)]>0x0&&_0x30bf7c>0x0)&&(_0x35abbd=_0x2688cc(0xdc),_0x1f81b8=_0x2688cc(0xc1));let _0x281434='';const _0x23ab0a=_0x2ebaa4+_0x30502c;if(currentFilter!==_0x2688cc(0x79)&&_0x23ab0a>0x0){const _0x143317=_0x2ebaa4/_0x23ab0a*0x64,_0x5acba3=currentFilter===_0x2688cc(0xa5)||currentFilter===_0x2688cc(0xb2)?'#00d2ff':_0x2688cc(0xa1),_0x33341d=currentFilter===_0x2688cc(0xa5)||currentFilter==='top'?_0x2688cc(0x90):_0x2688cc(0x98);_0x281434=_0x2688cc(0x82)+_0x5acba3+_0x2688cc(0x85)+_0x143317+_0x2688cc(0xf6)+_0x33341d+'\x20'+_0x143317+_0x2688cc(0xc5)+_0x1f81b8+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><span\x20style=\x22color:'+_0x5acba3+_0x2688cc(0x83)+_0x2ebaa4+_0x2688cc(0xeb)+_0x33341d+_0x2688cc(0x7b)+_0x30502c+_0x2688cc(0x9c);}const _0x54369f=getMedalIcon(_0x3c0cee),_0x2e3199=_0x2688cc(0xcb)+_0x21ec00[_0x2688cc(0x7e)]+'\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20h-100\x20shadow-sm\x20border-0\x20'+_0x35abbd+_0x2688cc(0x7f)+_0x54369f+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22font-size:\x201.2rem;\x22>'+_0x21ec00[_0x2688cc(0x7e)]+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22d-flex\x20justify-content-around\x20text-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><h4\x20class=\x22mb-0\x20font-weight-bold\x22>'+_0xbad28d[_0x2688cc(0xd8)]+_0x2688cc(0xc4)+_0xbad28d[_0x2688cc(0x8f)]+'</h4><small>Active</small></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><h4\x20class=\x22mb-0\x22>'+_0xbad28d[_0x2688cc(0x102)]+_0x2688cc(0x93)+_0x281434+_0x2688cc(0xfd)+_0x21ec00[_0x2688cc(0xb7)]+'</strong>\x20Total\x20Pax</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+(_0xbad28d[_0x2688cc(0x8f)]>0x0?'<div\x20class=\x22mt-1\x20font-italic\x20opacity-75\x22>('+_0x30bf7c+'\x20in\x20Active\x20Programs)</div>':'')+_0x2688cc(0x7c);_0x4a679e[_0x2688cc(0xaf)]+=_0x2e3199;});}function formatUrl(_0x6bcd2b){const _0x2909c0=_0x4e1d1d;if(!_0x6bcd2b)return'#';const _0x123984=_0x6bcd2b[_0x2909c0(0xf9)]();return _0x123984[_0x2909c0(0x7d)](_0x2909c0(0xb4))?_0x123984:_0x2909c0(0x100)+_0x123984;}function _0x584e(_0xe4e171,_0x2b7dc1){_0xe4e171=_0xe4e171-0x76;const _0x5b427d=_0x5b42();let _0x584e10=_0x5b427d[_0xe4e171];return _0x584e10;}function cleanPhone(_0x416985){if(!_0x416985)return'';return _0x416985['replace'](/\D/g,'');}function showDetails(_0x20187c){const _0x467510=_0x4e1d1d,_0xd66bf5=globalData[_0x20187c],_0x456817=document['getElementById'](_0x467510(0xc6));document[_0x467510(0xc9)]('detail-title')[_0x467510(0xf8)]=_0x20187c+_0x467510(0x99),_0x456817[_0x467510(0xaf)]='';if(!_0xd66bf5[_0x467510(0xee)]||_0xd66bf5[_0x467510(0xee)][_0x467510(0xef)]===0x0)_0x456817['innerHTML']=_0x467510(0xe9);else{const _0x202411={'Upcoming':0x0,'Active':0x1,'Completed':0x2},_0x533c1e=[..._0xd66bf5[_0x467510(0xee)]][_0x467510(0xf7)]((_0x5b2acd,_0x16e70d)=>{const _0x4b3aa7=_0x467510,_0x92ae7d=getStatus(_0x5b2acd[_0x4b3aa7(0xa0)],_0x5b2acd[_0x4b3aa7(0xb1)])[_0x4b3aa7(0x10a)],_0x529c8d=getStatus(_0x16e70d[_0x4b3aa7(0xa0)],_0x16e70d[_0x4b3aa7(0xb1)])[_0x4b3aa7(0x10a)];if(_0x202411[_0x92ae7d]!==_0x202411[_0x529c8d])return _0x202411[_0x92ae7d]-_0x202411[_0x529c8d];const _0x59300e=new Date(_0x5b2acd[_0x4b3aa7(0xa0)])-new Date(_0x16e70d[_0x4b3aa7(0xa0)]);return _0x92ae7d===_0x4b3aa7(0x102)?-_0x59300e:_0x59300e;});_0x533c1e[_0x467510(0xfa)](_0x32af7e=>{const _0x257ec6=_0x467510,_0x16083d=getStatus(_0x32af7e[_0x257ec6(0xa0)],_0x32af7e[_0x257ec6(0xb1)]),_0x4374eb=formatUrl(_0x32af7e['Registration\x20Url']),_0x2e9d29=cleanPhone(_0x32af7e[_0x257ec6(0xac)]),_0x137844=cleanTeacherNames(_0x32af7e[_0x257ec6(0xec)]),_0x4f8149=_0x2e9d29?_0x257ec6(0xe4)+_0x2e9d29+_0x257ec6(0x77)+_0x2e9d29+_0x257ec6(0xa3):_0x257ec6(0x9d);_0x456817[_0x257ec6(0xaf)]+='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20class=\x22'+_0x16083d[_0x257ec6(0x7a)]+_0x257ec6(0x76)+_0x16083d['label']+_0x257ec6(0x106)+_0x32af7e[_0x257ec6(0x8b)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+_0x32af7e[_0x257ec6(0xd3)]+_0x257ec6(0xe6)+_0x137844+_0x257ec6(0xd4)+_0x4f8149+_0x257ec6(0xd7)+_0x32af7e[_0x257ec6(0xa0)]+_0x257ec6(0xe6)+(_0x16083d[_0x257ec6(0xab)]?_0x257ec6(0xb5)+_0x4374eb+_0x257ec6(0x8a):'-')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>';});}document[_0x467510(0xc9)](_0x467510(0x89))[_0x467510(0xe2)][_0x467510(0xba)]=_0x467510(0x81),window[_0x467510(0xf3)]({'top':document[_0x467510(0xc9)](_0x467510(0x89))[_0x467510(0x80)]-0x14,'behavior':'smooth'});}function cleanTeacherNames(_0x3be61b){const _0x219c2b=_0x4e1d1d;if(!_0x3be61b)return'';return _0x3be61b[_0x219c2b(0xc8)](/\s*\([^)]*\)/g,'');}function showView(_0x2527db){const _0x2a39be=_0x4e1d1d,_0x3ab0c5=document[_0x2a39be(0xc9)](_0x2a39be(0x95)),_0x3d76ea=document[_0x2a39be(0xc9)]('state-summary-container'),_0x4e7860=document[_0x2a39be(0xc9)](_0x2a39be(0xd0)),_0x8edb5d=document['getElementById'](_0x2a39be(0x89));_0x2527db==='state'?(_0x3ab0c5[_0x2a39be(0xe2)][_0x2a39be(0xba)]=_0x2a39be(0x105),_0x4e7860['style'][_0x2a39be(0xba)]=_0x2a39be(0x105),_0x3d76ea[_0x2a39be(0xe2)][_0x2a39be(0xba)]=_0x2a39be(0x81),_0x8edb5d[_0x2a39be(0xe2)][_0x2a39be(0xba)]=_0x2a39be(0x105),document[_0x2a39be(0xc9)](_0x2a39be(0xdb))[_0x2a39be(0xe3)]=_0x2a39be(0xa4),document[_0x2a39be(0xc9)](_0x2a39be(0xd2))['className']=_0x2a39be(0xe7),renderStateSummary()):(_0x3ab0c5[_0x2a39be(0xe2)][_0x2a39be(0xba)]=_0x2a39be(0x92),_0x4e7860['style']['display']='block',_0x3d76ea[_0x2a39be(0xe2)][_0x2a39be(0xba)]=_0x2a39be(0x105),_0x8edb5d[_0x2a39be(0xe2)][_0x2a39be(0xba)]=_0x2a39be(0x81),document['getElementById'](_0x2a39be(0xdb))['className']='btn\x20btn-outline-warning',document['getElementById'](_0x2a39be(0xd2))[_0x2a39be(0xe3)]='btn\x20btn-warning',renderCards());}function renderStateSummary(){const _0x2d810f=_0x4e1d1d,_0x43ae0a=document[_0x2d810f(0xc9)](_0x2d810f(0xf5));let _0x54771c={'Upcoming':0x0,'Active':0x0,'Completed':0x0},_0x33d002={'entry':0x0,'other':0x0},_0x20cc16=[];Object['keys'](globalData)[_0x2d810f(0xfa)](_0x12fe4c=>{const _0x111b5=_0x2d810f,_0x5a357b=globalData[_0x12fe4c];let _0x50b1e9=new Set(),_0x222421=0x0;_0x5a357b[_0x111b5(0xee)][_0x111b5(0xfa)](_0x451794=>{const _0x3f96a1=_0x111b5,_0x3d93e8=_0x451794['ID'],_0x166ac2=getStatus(_0x451794[_0x3f96a1(0xa0)],_0x451794['End\x20Date']),_0x55a920=parseInt(_0x451794[_0x3f96a1(0xd3)])||0x0;!_0x50b1e9['has'](_0x3d93e8)&&(_0x50b1e9[_0x3f96a1(0x10b)](_0x3d93e8),_0x54771c[_0x166ac2[_0x3f96a1(0x10a)]]++,ENTRY_LEVEL_COURSES[_0x3f96a1(0x9e)](_0x451794['Course\x20Type'])?_0x33d002[_0x3f96a1(0x79)]+=_0x55a920:_0x33d002[_0x3f96a1(0xa7)]+=_0x55a920),_0x222421+=_0x55a920;}),_0x20cc16[_0x111b5(0xdf)]({'name':_0x12fe4c,'courses':_0x50b1e9[_0x111b5(0xd5)],'pax':_0x222421});});const _0x42813c=[..._0x20cc16][_0x2d810f(0xf7)]((_0x228c86,_0xb5fd31)=>_0xb5fd31['courses']-_0x228c86[_0x2d810f(0xee)])[_0x2d810f(0x10c)](0x0,0x3),_0x497c81=[..._0x20cc16][_0x2d810f(0xf7)]((_0x15c0cb,_0x5dc3ba)=>_0x5dc3ba[_0x2d810f(0xbb)]-_0x15c0cb[_0x2d810f(0xbb)])[_0x2d810f(0x10c)](0x0,0x3);_0x43ae0a[_0x2d810f(0xaf)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22row\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-md-6\x20mb-4\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20shadow-sm\x20border-primary\x20h-100\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-header\x20bg-primary\x20text-white\x20font-weight-bold\x22>Total\x20Courses\x20Portfolio</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x20d-flex\x20justify-content-around\x20align-items-center\x20text-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><h2\x20class=\x22text-info\x22>'+_0x54771c[_0x2d810f(0xd8)]+'</h2><p>Upcoming</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><h2\x20class=\x22text-success\x22>'+_0x54771c[_0x2d810f(0x8f)]+'</h2><p>Active</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><h2\x20class=\x22text-muted\x22>'+_0x54771c[_0x2d810f(0x102)]+_0x2d810f(0x9b)+_0x33d002[_0x2d810f(0x79)]+'</h2><p>Entry\x20Level</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><h2\x20class=\x22text-dark\x22>'+_0x33d002[_0x2d810f(0xa7)]+_0x2d810f(0x104)+(_0x33d002[_0x2d810f(0x79)]+_0x33d002['other'])+_0x2d810f(0xb8);}document['addEventListener'](_0x4e1d1d(0xf1),loadDashboard);
+const SECRET_KEY = "Secjgd123#$13";
+let globalData = {};
+let historyData = {};
+let currentDataSource = 'current'; // 'current' or 'history'
+
+async function loadEncryptedData(filename) {
+    const response = await fetch(filename);
+    const encryptedText = await response.text();
+    const decrypted = CryptoJS.AES.decrypt(encryptedText, SECRET_KEY);
+    return JSON.parse(decrypted.toString(CryptoJS.enc.Utf8));
+}
+
+async function loadDashboard() {
+    // Load both current and history data
+    const [currentRaw, historyRaw] = await Promise.all([
+        loadEncryptedData('data.enc'),
+        loadEncryptedData('data_history.enc')
+    ]);
+    
+    globalData = currentRaw.districts;
+    historyData = historyRaw.districts;
+    
+    // Update the UI with the date
+    const lastUpdated = currentRaw.metadata.last_updated;
+    document.getElementById('last-updated-text').innerText = `Data Last Updated at: ${lastUpdated}`;
+    
+    // Set default sort to top performing
+    document.getElementById('sortTopCheck').checked = true;
+    
+    // Set default filter to entry level
+    document.getElementById('btn-all').className = 'btn btn-outline-primary';
+    document.getElementById('btn-entry').className = 'btn btn-primary';
+    
+    // Populate course filter dropdown
+    const courseSelect = document.getElementById('courseTypeFilter');
+    if (courseSelect) {
+        courseSelect.innerHTML = '<option value="">All Course Types</option>';
+        FILTER_COURSES.forEach(course => {
+            courseSelect.innerHTML += `<option value="${course}">${course}</option>`;
+        });
+    }
+    
+    renderCards();
+}
+
+function getStatus(startStr, endStr) {
+    const today = new Date();
+    today.setHours(0,0,0,0); // Focus on date only
+    const start = new Date(startStr);
+    const end = new Date(endStr);
+
+    if (today < start) return { label: "Upcoming", class: "table-info", showBtn: true };
+    if (today >= start && today <= end) return { label: "Active", class: "table-success", showBtn: false };
+    return { label: "Completed", class: "table-secondary", showBtn: false };
+}
+
+let currentFilter = 'entry'; 
+let isSortingTop = true;
+
+function setFilter(type) {
+    currentFilter = type;
+    // Update button UI
+    document.getElementById('btn-all').className = `btn ${type === 'all' ? 'btn-primary' : 'btn-outline-primary'}`;
+    document.getElementById('btn-entry').className = `btn ${type === 'entry' ? 'btn-primary' : 'btn-outline-primary'}`;
+    renderCards();
+}
+
+function setCourseFilter(courseType) {
+    selectedCourseType = courseType;
+    renderCards();
+}
+
+function toggleSort() {
+    isSortingTop = document.getElementById('sortTopCheck').checked;
+    renderCards();
+}
+
+// Define the Entry Level List
+const ENTRY_LEVEL_COURSES = [
+    "Happiness Program", 
+    "Sahaj Samadhi Dhyana Yoga", 
+    "Rural Happiness Program", 
+    "Happiness Program for Youth-3 Days",
+    "Happiness Program For Youth",
+    "Online Meditation and Breath Workshop", 
+    "YES!+", 
+    "Happiness Program (3 Days)", 
+    "YLTP", 
+    "Utkarsha Yoga", 
+    "Medha Yoga Level 1"
+];
+
+// Define filterable courses for dropdown
+const FILTER_COURSES = [
+    "Happiness Program",
+    "Sahaj Samadhi Dhyana Yoga",
+    "YES!+",
+    "YLTP"
+];
+
+// Course mapping - maps UI selection to actual course type(s)
+const COURSE_TYPE_MAPPING = {
+    "Happiness Program": ["Happiness Program", "Rural Happiness Program", "Happiness Program (3 Days)", "Happiness Program for Youth-3 Days", "Happiness Program For Youth"],
+    "Sahaj Samadhi Dhyana Yoga": ["Sahaj Samadhi Dhyana Yoga"],
+    "YES!+": ["YES!+"],
+    "YLTP": ["YLTP"]
+};
+
+let selectedCourseType = null; // null means no specific course filter
+
+function getMedalIcon(index) {
+    if (!isSortingTop) return "";
+    
+    // Size and color configuration
+    const style = "font-size: 1.8rem; display: block; margin-bottom: 5px;";
+    
+    if (index === 0) return `<i class="bi bi-trophy-fill" style="${style} color: #FFD700;"></i>`; // Gold
+    if (index === 1) return `<i class="bi bi-award-fill" style="${style} color: #C0C0C0;"></i>`;  // Silver
+    if (index === 2) return `<i class="bi bi-award-fill" style="${style} color: #CD7F32;"></i>`;  // Bronze
+    return "";
+}
+
+function filterData(filterType) {
+    currentFilter = filterType;
+    
+    // Update button active states
+    document.querySelectorAll('.btn-group .btn').forEach(btn => btn.classList.remove('active'));
+    if(filterType === 'all') document.getElementById('btn-all').classList.add('active');
+    if(filterType === 'top') document.getElementById('btn-top').classList.add('active');
+    if(filterType === 'entry') document.getElementById('btn-entry').classList.add('active');
+
+    renderCards();
+}
+
+function renderCards() {
+    const container = document.getElementById('dashboard-container');
+    container.innerHTML = "";
+    const activeData = getActiveData();
+
+    // 1. Create a workable copy of the data
+    let displayList = Object.keys(activeData).map(name => {
+        let dist = JSON.parse(JSON.stringify(activeData[name])); 
+        
+        if (currentFilter === 'entry') {
+            dist.courses = dist.courses.filter(c => ENTRY_LEVEL_COURSES.includes(c['Course Type']));
+            // Re-calculate pax based on entry level ONLY
+            dist.total_pax = dist.courses.reduce((sum, c) => sum + (parseInt(c['Registered Pax Count']) || 0), 0);
+        }
+        
+        // Apply specific course type filter if selected
+        if (selectedCourseType && COURSE_TYPE_MAPPING[selectedCourseType]) {
+            const allowedTypes = COURSE_TYPE_MAPPING[selectedCourseType];
+            dist.courses = dist.courses.filter(c => allowedTypes.includes(c['Course Type']));
+            // Re-calculate pax based on selected course type
+            dist.total_pax = dist.courses.reduce((sum, c) => sum + (parseInt(c['Registered Pax Count']) || 0), 0);
+        }
+        
+        return { name, ...dist };
+    });
+
+    // 3. Apply Sorting
+    if (isSortingTop) {
+        // Sort by registrations (descending)
+        displayList.sort((a, b) => b.total_pax - a.total_pax);
+    } else {
+        // Sort by name (alphabetical)
+        displayList.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    // 4. Render the filtered/sorted cards
+    displayList.forEach((dist, index) => {
+        const stats = { Upcoming: 0, Active: 0, Completed: 0 };
+        // New counters for the Pie Chart
+        let entryCount = 0;
+        let advancedCount = 0;
+        let activeRegistrations = 0;
+
+        dist.courses.forEach(c => {
+            const status = getStatus(c['Start Date'], c['End Date']);
+            stats[status.label]++;
+
+            const pax = parseInt(c['Registered Pax Count']) || 0;
+
+            // Track registrations specifically for Active programs
+            if (status.label === "Active") {
+                activeRegistrations += pax;
+            }
+            
+            // Calculate Mix
+            if (ENTRY_LEVEL_COURSES.includes(c['Course Type'])) {
+                entryCount++;
+            } else {
+                advancedCount++;
+            }
+        });
+
+        // --- NEW MULTI-FACTOR COLOR LOGIC ---
+        let statusClass = "bg-danger text-white"; 
+        let textColor = "text-white";
+
+        // Condition for GREEN
+        if (stats.Upcoming >= 2 || (stats.Active > 0 && activeRegistrations > 5)) {
+            statusClass = "bg-success text-white";
+        } 
+        // Condition for YELLOW
+        else if (stats.Upcoming === 1 || (stats.Active > 0 && activeRegistrations > 0)) {
+            statusClass = "bg-warning text-dark";
+            textColor = "text-dark";
+        }
+
+        // ---- NEW: PIE CHART GENERATION ----
+        let chartHtml = '';
+        const totalMix = entryCount + advancedCount;
+        // Only show chart if not in 'entry' filter mode AND there is data
+        if (currentFilter !== 'entry' && totalMix > 0) {
+            const entryPercent = (entryCount / totalMix) * 100;
+            // Colors used for the slices
+            const colEntry = currentFilter === 'all' || currentFilter === 'top' ? '#00d2ff' : '#007bff'; // Cyan for Entry
+            const colAdv = currentFilter === 'all' || currentFilter === 'top' ? '#ffc107' : '#6c757d';  // Yellow/Gold for Adv
+
+            chartHtml = `
+            <div class="pie-chart-container d-flex align-items-center justify-content-center">
+                 <div class="pie-chart mr-3" style="background: conic-gradient(${colEntry} 0% ${entryPercent}%, ${colAdv} ${entryPercent}% 100%);"></div>
+                <div class="text-left chart-legend ${textColor}">
+                    <div><span style="color:${colEntry}">■</span> Entry: <strong>${entryCount}</strong></div>
+                    <div><span style="color:${colAdv}">■</span> Other: <strong>${advancedCount}</strong></div>
+                </div>
+            </div>
+            `;
+        }
+
+        const medalIcon = getMedalIcon(index);
+
+        const cardHtml = `
+            <div class="col-12 col-lg-3 mb-4" onclick="showDetails('${dist.name}')">
+                <div class="card h-100 shadow-sm border-0 ${statusClass}">
+                    <div class="card-header border-light bg-transparent text-center font-weight-bold pt-3">
+                        ${medalIcon}
+                        <span style="font-size: 1.2rem;">${dist.name}</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-around text-center">
+                            <div><h4 class="mb-0 font-weight-bold">${stats.Upcoming}</h4><small>Upcoming</small></div>
+                            <div><h4 class="mb-0">${stats.Active}</h4><small>Active</small></div>
+                            <div><h4 class="mb-0">${stats.Completed}</h4><small>Done</small></div>
+                        </div>
+                        
+                        ${chartHtml}
+
+                        <hr class="border-light opacity-50">
+                        <div class="text-center small">
+                            <div><strong>${dist.total_pax}</strong> Total Pax</div>
+                                ${stats.Active > 0 ? `<div class="mt-1 font-italic opacity-75">(${activeRegistrations} in Active Programs)</div>` : ''}
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        container.innerHTML += cardHtml;
+    });
+}
+
+// Helper to fix the relative link issue
+function formatUrl(url) {
+    if (!url) return "#";
+    const trimmed = url.trim();
+    // If it already starts with http, return as is. 
+    // Otherwise, prepend https://
+    return (trimmed.startsWith('http')) ? trimmed : `https://${trimmed}`;
+}
+
+// Helper to clean phone numbers for links
+function cleanPhone(phone) {
+    if (!phone) return "";
+    return phone.replace(/\D/g, ''); // Removes everything except digits
+}
+
+function showDetails(distName) {
+    const activeData = getActiveData();
+    const dist = activeData[distName];
+    const tableBody = document.getElementById('detail-table-body');
+    document.getElementById('detail-title').innerText = `${distName} Program Schedule`;
+    tableBody.innerHTML = "";
+    
+    if (!dist.courses || dist.courses.length === 0) {
+        tableBody.innerHTML = `<tr><td colspan="6" class="text-center py-4 text-muted">No programs currently scheduled for this district.</td></tr>`;
+    } else {
+        const statusOrder = { "Upcoming": 0, "Active": 1, "Completed": 2 };
+        const sortedCourses = [...dist.courses].sort((a, b) => {
+            const statusA = getStatus(a['Start Date'], a['End Date']).label;
+            const statusB = getStatus(b['Start Date'], b['End Date']).label;
+            if (statusOrder[statusA] !== statusOrder[statusB]) {
+                return statusOrder[statusA] - statusOrder[statusB];
+            }
+            // Completed: descending; Upcoming/Active: ascending
+            const dateOrder = new Date(a['Start Date']) - new Date(b['Start Date']);
+            return statusA === "Completed" ? -dateOrder : dateOrder;
+        });
+        sortedCourses.forEach(c => {
+        const status = getStatus(c['Start Date'], c['End Date']);
+        const cleanUrl = formatUrl(c['Registration Url']);
+        const phone = cleanPhone(c['Phone']);
+        const teacherDisplay = cleanTeacherNames(c['Teachers']);
+        
+        // Generate WhatsApp and Call icons if a phone number exists
+        const contactActions = phone ? `
+            <div class="mt-1">
+                <a href="tel:${phone}" class="btn btn-sm btn-outline-secondary mr-1" title="Call Teacher">
+                    📞
+                </a>
+                <a href="https://wa.me/91${phone}" target="_blank" class="btn btn-sm btn-outline-success" title="WhatsApp Teacher">
+                    💬
+                </a>
+            </div>
+        ` : '<small class="text-muted">No phone</small>';
+
+        tableBody.innerHTML += `
+            <tr class="${status.class}">
+                <td><strong>${status.label}</strong></td>
+                <td>${c['Course Type']}</td>
+                <td>${c['Registered Pax Count']}</td>
+                <td>
+                    ${teacherDisplay}
+                    ${contactActions}
+                </td>
+                <td>${c['Start Date']}</td>
+                <td>
+                    ${status.showBtn ? `<a href="${cleanUrl}" target="_blank" class="btn btn-sm btn-primary">Register</a>` : '-'}
+                </td>
+            </tr>`;
+        });
+    }
+    
+    document.getElementById('detail-view').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('detail-view').offsetTop - 20, behavior: 'smooth' });
+}
+
+// Helper to strip teacher codes like (KR1450)
+function cleanTeacherNames(names) {
+    if (!names) return "";
+    // Removes text inside parentheses and the parentheses themselves
+    return names.replace(/\s*\([^)]*\)/g, "");
+}
+
+function showView(viewType) {
+    const dashboard = document.getElementById('dashboard-container');
+    const summary = document.getElementById('state-summary-container');
+    const controls = document.getElementById('filter-controls');
+    const detailView = document.getElementById('detail-view');
+
+    if (viewType === 'state') {
+        dashboard.style.display = 'none';
+        controls.style.display = 'none'; // Hide filters in state view
+        summary.style.display = 'block';
+        detailView.style.display = 'none'; // Ensure detail view is hidden
+        document.getElementById('state_label').className = 'btn btn-warning';
+        document.getElementById('district_label').className = 'btn btn-outline-warning';
+        renderStateSummary();
+    } else {
+        dashboard.style.display = 'flex';
+        controls.style.display = 'block';
+        summary.style.display = 'none';
+        detailView.style.display = 'block'; // Ensure detail view is visible
+        document.getElementById('state_label').className = 'btn btn-outline-warning';
+        document.getElementById('district_label').className = 'btn btn-warning';
+        renderCards();
+    }
+}
+
+function switchDataSource(source) {
+    currentDataSource = source;
+    
+    // Update button UI
+    document.getElementById('btn-current').className = `btn ${source === 'current' ? 'btn-info' : 'btn-outline-info'}`;
+    document.getElementById('btn-history').className = `btn ${source === 'history' ? 'btn-info' : 'btn-outline-info'}`;
+    
+    // Update date range display
+    const dateRange = document.getElementById('date-range');
+    if (dateRange) {
+        dateRange.innerText = source === 'current' ? '(Jun 1, 2026 onwards)' : '(Jan 15, 2026 to May 31, 2026)';
+    }
+    
+    renderCards();
+}
+
+function getActiveData() {
+    return currentDataSource === 'history' ? historyData : globalData;
+}
+
+function renderStateSummary() {
+    const container = document.getElementById('state-summary-container');
+    
+    let totalStats = { Upcoming: 0, Active: 0, Completed: 0 };
+    let totalPax = { entry: 0, other: 0 };
+    let districtMetrics = [];
+
+    const activeData = getActiveData();
+    Object.keys(activeData).forEach(name => {
+        const dist = activeData[name];
+        
+        // Use a Set to track unique Course IDs for this district
+        let uniqueCourseIds = new Set();
+        let distPax = 0;
+
+        dist.courses.forEach(c => {
+            const courseId = c['ID']; // Assuming 'ID' is the unique identifier
+            const status = getStatus(c['Start Date'], c['End Date']);
+            const pax = parseInt(c['Registered Pax Count']) || 0;
+
+            // Only count status and uniqueness if we haven't seen this ID in this district yet
+            if (!uniqueCourseIds.has(courseId)) {
+                uniqueCourseIds.add(courseId);
+                totalStats[status.label]++;
+                
+                // Categorize Pax
+                if (ENTRY_LEVEL_COURSES.includes(c['Course Type'])) {
+                    totalPax.entry += pax;
+                } else {
+                    totalPax.other += pax;
+                }
+            }
+            
+            // Note: We sum pax normally here, but if your CSV duplicates 
+            // the same pax count across multiple rows for the same ID, 
+            // you should move this inside the 'if' block above as well.
+            distPax += pax; 
+        });
+
+        districtMetrics.push({ 
+            name, 
+            courses: uniqueCourseIds.size, // Use the count of unique IDs
+            pax: distPax 
+        });
+    });
+
+    // Sorting logic for Top 3
+    const topByCourses = [...districtMetrics].sort((a, b) => b.courses - a.courses).slice(0, 3);
+    const topByPax = [...districtMetrics].sort((a, b) => b.pax - a.pax).slice(0, 3);
+
+    container.innerHTML = `
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm border-primary h-100">
+                    <div class="card-header bg-primary text-white font-weight-bold">Total Courses Portfolio</div>
+                    <div class="card-body d-flex justify-content-around align-items-center text-center">
+                        <div><h2 class="text-info">${totalStats.Upcoming}</h2><p>Upcoming</p></div>
+                        <div><h2 class="text-success">${totalStats.Active}</h2><p>Active</p></div>
+                        <div><h2 class="text-muted">${totalStats.Completed}</h2><p>Completed</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm border-success h-100">
+                    <div class="card-header bg-success text-white font-weight-bold">Total Registrations</div>
+                    <div class="card-body d-flex justify-content-around align-items-center text-center">
+                        <div><h2 class="text-dark">${totalPax.entry}</h2><p>Entry Level</p></div>
+                        <div><h2 class="text-dark">${totalPax.other}</h2><p>Other Programs</p></div>
+                        <div class="border-left pl-3"><h2>${totalPax.entry + totalPax.other}</h2><p>Total</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+document.addEventListener('DOMContentLoaded', loadDashboard);
